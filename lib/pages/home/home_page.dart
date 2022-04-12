@@ -216,6 +216,7 @@ class HomePage extends StatelessWidget {
                   ProductCard(),
                   ProductCard(),
                   ProductCard(),
+                  ProductCard(),
                 ],
               ),
             ],
@@ -248,6 +249,7 @@ class HomePage extends StatelessWidget {
         ),
         child: Column(
           children: [
+            ProductTile(),
             ProductTile(),
             ProductTile(),
             ProductTile(),
