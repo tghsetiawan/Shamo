@@ -27,7 +27,7 @@ class WishlistCard extends StatelessWidget {
               width: 60,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 12,
           ),
           Expanded(
