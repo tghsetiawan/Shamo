@@ -94,11 +94,127 @@ class _ProductPageState extends State<ProductPage> {
       );
     }
 
+    Widget content() {
+      return Container(
+        width: double.infinity,
+        margin: const EdgeInsets.only(top: 17),
+        decoration: BoxDecoration(
+          borderRadius: const BorderRadius.vertical(
+            top: Radius.circular(24),
+          ),
+          color: backgroundColor1,
+        ),
+        child: Column(
+          children: [
+            // Note: Header
+            Container(
+              margin: EdgeInsets.only(
+                top: defaultMargin,
+                right: defaultMargin,
+                left: defaultMargin,
+              ),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'TERREX URBAN LOW',
+                          style: primaryTextStyle.copyWith(
+                            fontSize: 18,
+                            fontWeight: semiBold,
+                          ),
+                        ),
+                        Text(
+                          'Hiking',
+                          style: secondaryTextStyle.copyWith(
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Image.asset(
+                    'assets/button_wishlist.png',
+                    width: 48,
+                  )
+                ],
+              ),
+            ),
+
+            // Note: Price
+            Container(
+              width: double.infinity,
+              margin: EdgeInsets.only(
+                top: 20,
+                left: defaultMargin,
+                right: defaultMargin,
+              ),
+              padding: EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(4),
+                color: backgroundColor2,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Price starts from',
+                    style: primaryTextStyle,
+                  ),
+                  Text(
+                    '\$143,98',
+                    style: priceTextStyle.copyWith(
+                      fontSize: 16,
+                      fontWeight: semiBold,
+                    ),
+                  )
+                ],
+              ),
+            ),
+
+            // Note: Description
+            Container(
+              width: double.infinity,
+              margin: EdgeInsets.only(
+                top: defaultMargin,
+                right: defaultMargin,
+                left: defaultMargin,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Description',
+                    style: primaryTextStyle.copyWith(
+                      fontWeight: medium,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 12,
+                  ),
+                  Text(
+                    'Unpaved trails and mixed surfaces are easy when you have the traction and support you need. Casual enough for the daily commute.',
+                    style: subtitleTextStyle.copyWith(
+                      fontWeight: light,
+                    ),
+                    textAlign: TextAlign.justify,
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
+      );
+    }
+
     return Scaffold(
       backgroundColor: backgroundColor6,
       body: ListView(
         children: [
           header(),
+          content(),
         ],
       ),
     );
