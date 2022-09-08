@@ -260,13 +260,15 @@ class _ProductPageState extends State<ProductPage> {
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
-                      children: familiarShoes.map((image) {
-                        index++;
-                        return Container(
-                            margin: EdgeInsets.only(
-                                left: index == 0 ? defaultMargin : 0),
-                            child: familiarShoesCard(image));
-                      }).toList(),
+                      children: familiarShoes.map(
+                        (image) {
+                          index++;
+                          return Container(
+                              margin: EdgeInsets.only(
+                                  left: index == 0 ? defaultMargin : 0),
+                              child: familiarShoesCard(image));
+                        },
+                      ).toList(),
                     ),
                   ),
                 ],
